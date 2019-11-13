@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>LMS</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="assets/js/client.js" type="application/javascript"></script>
+    <script type="application/javascript">
+		$(document).ready(function (){
+		  getUsers(1);
+		});
+	</script>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="list-block">
+            <div class="userlist-title">
+                        <h2>User List</h2>
+            </div>
+            <ul class="list-row" id="userList">
+                
+               
+
+            </ul>
+
+            
+
+
+        </div>
+
+<div class="text-center">
+        <ul class="pagination pagination-sm" id="userPaging">
+               
+                
+              </ul> 
+</div>   
+<div class="logout-block">
+        <p  class="text-center"><a href="#" onClick="logout()"><i class="fa fa-sign-out" aria-hidden="true"></i> Log Out</a></p>
+     </div>
+    </div>
+
+ 
+</body>
+
+</html>

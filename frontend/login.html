@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Knowledge City</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+   
+
+</head>
+
+<body>
+        <div class="login-block">
+            <div class="text-center">
+                <img class="logo" src="assets/images/logo.svg" alt="logo">
+            </div>
+            <div class="form login-form">
+                <h4 class="mt-0">Welcome to the Learning Management System</h4>
+                <p>Please log in to continue</p>
+                <form >
+                    <div class="form-group">
+                        <div class="p-relative">
+                            <img src="assets/images/user.svg" alt="userimage">
+                            <input type="text" placeholder="Username" id='userName' class="form-control cred" >
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="p-relative">
+                            <img src="assets/images/password.svg" alt="password">
+                            <input type="password" placeholder="Password" class="form-control cred" id="userPass">
+                        </div>
+                    </div>
+                    <div class="checkbox pl-13">
+                        <label><input type="checkbox" id="remember_me"> Remember me</label>
+                    </div>
+                    <div class="p-relative mt-50">
+                        <button type="button" onClick="AuthLogin()" class="btn btn-default login-btn">Log In</button>
+                        <i class="fa fa-chevron-right chev" aria-hidden="true"></i>
+                    </div>
+                    <div id="errorMsg" class="text-center clss-red pt-10"></div>
+                </form>
+            </div>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <script src="assets/js/client.js" type="application/javascript"></script>
+    
+      <script type="application/javascript">
+		$(document).ready(function (){
+		 if (localStorage.chkbx && localStorage.chkbx != '') {
+                    $('#remember_me').attr('checked', 'checked');
+                    $('#userName').val(localStorage.username);
+                    $('#userPass').val(localStorage.pass);
+                } else {
+                    $('#remember_me').removeAttr('checked');
+                    $('#userName').val('');
+                    $('#userPass').val('');
+                }
+		});
+	</script>
+
+</body>
+
+</html>
