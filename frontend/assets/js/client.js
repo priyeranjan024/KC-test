@@ -29,7 +29,7 @@ function AuthLogin() {
 }
 
 
-// Get all users with respect to account_id, start page and Authorize token
+// Get all users with respect to Authorize token
 function getUsers(_start) {
 	// checking localstorage to validate api with userdetais and token
     if (localStorage.getItem('userData') != null) {
